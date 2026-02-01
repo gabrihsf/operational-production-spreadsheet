@@ -71,3 +71,14 @@ The current version includes the **Production module**, composed of the followin
 ## 📈 Project Status
 This repository represents the **first stage** of a larger operational metrics structure.  
 Additional modules (e.g., consumption, availability, dashboards) may be added in future iterations.
+
+## 📊 Dashboards & Spreadsheets
+
+### BDTs
+![BDTs](images/bdts.png)
+
+### Stock
+![Estoque](images/stock.png)
+
+### VMI – Meta Calculation
+![VMI](images/vmi.png)
