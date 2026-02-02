@@ -1,8 +1,8 @@
 # 📊 Operational Production Spreadsheet
 
-This repository contains a **demonstration spreadsheet model** designed to support operational production tracking and planning.
+This repository contains a **demonstration spreadsheet model** designed to support operational production tracking, planning, and machine consumption monitoring.
 
-The structure was created to organize daily production data and transform it into **clear indicators**, supporting monitoring, control, and production forecasting.
+The structure was created to organize daily operational data and transform it into **clear indicators**, supporting monitoring, control, and forecasting based on real operational logic.
 
 ⚠️ **All data used in this project is fictional and for demonstration purposes only.**  
 Some labels and sheet names are in **Portuguese**, reflecting the original operational context and real-world usage.
@@ -11,17 +11,24 @@ Some labels and sheet names are in **Portuguese**, reflecting the original opera
 
 ## 🎯 Project Objective
 
-To centralize production-related data and provide:
+To centralize operational data and provide:
 - Visibility of production progress
 - Control of operational execution
-- Forecasts based on real production rhythm
+- Monitoring of machine consumption indicators
+- Forecasts based on real operational rhythm
 - Support for decision-making through structured indicators
 
 ---
 
-## 🧩 Spreadsheet Structure (Production Module)
+## 🧩 Spreadsheet Structure
 
-The current version includes the **Production module**, composed of the following sheets:
+The project is organized into **operational modules**, each focused on a specific set of indicators.
+
+---
+
+## 📦 Production Module
+
+The **Production module** is responsible for tracking daily production and transforming raw data into operational indicators.
 
 ### 🔹 BDTs (Daily Production Records)
 - Daily production records by operator
@@ -36,7 +43,7 @@ The current version includes the **Production module**, composed of the followin
 
 ### 🔹 Stand Registration (Cadastro de Talhão)
 - Centralized registration of all stands to be worked
-- Contains key information used across other sheets
+- Contains key information reused across other sheets
 - Ensures data consistency throughout the model
 
 ### 🔹 Volume x Rhythm
@@ -59,18 +66,59 @@ The current version includes the **Production module**, composed of the followin
 
 ---
 
+## ⛽ Consumption Module (Diesel & Lubricants)
+
+The **Consumption module** focuses on monitoring **machine fuel and lubricant consumption**, providing indicators that support cost control and operational efficiency.
+
+Unlike production targets, consumption targets are based on **reduction factors**, where the goal is to consume **less than a defined reference value**.
+
+### 🔹 Diesel
+- Controls diesel input and output for machines and fuel trucks (comboios)
+- Centralizes daily diesel consumption data by machine
+- Acts as the raw data layer for diesel indicators
+
+### 🔹 Lubricants
+The lubricants control follows the same logic as diesel, with individual sheets for each lubricant type:
+- Grease
+- 15W40
+- Hydraulic Oil 68
+
+Each sheet:
+- Controls lubricant input and output by machine
+- Allows independent tracking per lubricant type
+
+> ⚠️ The lubricants section is **fully scalable** and can be expanded to include as many lubricant types as required, based on machine configuration and client needs.
+
+### 🔹 Diesel Target (Meta Diesel)
+- Defines diesel consumption targets
+- Uses **reduction factors** instead of growth factors
+- Compares actual consumption against target consumption
+
+### 🔹 Lubricants Target (Meta Lubrificantes)
+- Defines consumption targets for lubricants
+- Applies the same reduction-based logic used in diesel targets
+- Provides a consolidated view of lubricant consumption performance
+
+---
+
 ## 🛠️ Tools & Skills Applied
 - Excel (advanced formulas)
-- Indicator logic
+- Indicator and KPI logic
 - Data organization
 - Operational process understanding
-- Analytical thinking
+- Analytical and structured thinking
 
 ---
 
 ## 📈 Project Status
-This repository represents the **first stage** of a larger operational metrics structure.  
-Additional modules (e.g., consumption, availability, dashboards) may be added in future iterations.
+This repository represents the **first stage** of a larger operational metrics structure.
+
+Future iterations may include:
+- Availability and maintenance indicators
+- Integrated dashboards
+- Additional operational modules
+
+---
 
 ## 📊 Dashboards & Spreadsheets
 
@@ -78,7 +126,19 @@ Additional modules (e.g., consumption, availability, dashboards) may be added in
 ![BDTs](images/bdts.png)
 
 ### Stock
-![Estoque](images/stock.png)
+![Stock](images/stock.png)
 
-### VMI – Meta Calculation
+### VMI – Production Target Calculation
 ![VMI](images/vmi.png)
+
+### Diesel Consumption
+![Diesel](images/diesel.png)
+
+### Lubricant Consumption (15W40)
+![15W40](images/15w40.png)
+
+### Diesel Target
+![Diesel Target](images/diesel%20target.png)
+
+### Lubricants Target
+![Lubricants Target](images/lubricants%20target.png)
