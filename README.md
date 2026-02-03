@@ -1,6 +1,6 @@
 # 📊 Operational Production Spreadsheet
 
-This repository contains a **demonstration spreadsheet model** designed to support operational production tracking, planning, and machine consumption monitoring.
+This repository contains a **demonstration spreadsheet model** designed to support operational production tracking, planning, consumption control, and machine availability monitoring.
 
 The structure was created to organize daily operational data and transform it into **clear indicators**, supporting monitoring, control, and forecasting based on real operational logic.
 
@@ -14,7 +14,7 @@ Some labels and sheet names are in **Portuguese**, reflecting the original opera
 To centralize operational data and provide:
 - Visibility of production progress
 - Control of operational execution
-- Monitoring of machine consumption indicators
+- Monitoring of consumption and availability indicators
 - Forecasts based on real operational rhythm
 - Support for decision-making through structured indicators
 
@@ -23,6 +23,38 @@ To centralize operational data and provide:
 ## 🧩 Spreadsheet Structure
 
 The project is organized into **operational modules**, each focused on a specific set of indicators.
+
+---
+
+## 📁 Repository Structure
+
+- **Production Control Spreadsheet**
+  - Tracks daily production by machine
+  - Supports productivity analysis over time
+
+- **Fuel & Lubricants Control Spreadsheet**
+  - Diesel consumption monitoring
+  - Lubricants usage tracking
+  - Helps identify inefficiencies and abnormal consumption patterns
+
+- **Indicators & Metrics**
+  - Mechanical Availability (DM)
+  - Operational Availability (DO)
+  - Relationship between maintenance, availability, and production
+
+---
+
+## 📌 Key Concepts
+
+### 🔧 Mechanical Availability (DM)
+**Mechanical Availability (DM)** represents the percentage of time a machine is mechanically able to operate, considering failures and corrective maintenance.
+
+> DM indicates how reliable the equipment is from a mechanical standpoint.
+
+### ⚙️ Operational Availability (DO)
+**Operational Availability (DO)** represents the percentage of time a machine is actually available for operation, considering mechanical availability, operational delays, and other non-mechanical stoppages.
+
+> DO reflects how much the machine is truly available for production in real operating conditions.
 
 ---
 
@@ -101,6 +133,45 @@ Each sheet:
 
 ---
 
+## ⏱️ Availability Module (DM & DO)
+
+The **Availability module** is designed to monitor **machine availability and downtime**, transforming stop records into daily and monthly availability indicators.
+
+As with other modules, all calculations are based on **real data entries**, and availability targets use **reduction factors**, aiming to reduce downtime hours over time.
+
+### 🔹 Downtime Reasons (Motivos de Parada)
+- Base data sheet for DM and DO calculations
+- Records downtime by:
+  - Date
+  - Machine
+  - Operator
+  - Downtime duration
+  - Downtime reason code
+
+### 🔹 Availability
+- Calculates **DM and DO availability**
+- Results are available:
+  - Daily
+  - By shift
+  - Per machine
+
+### 🔹 Monthly Control
+- Consolidates DM and DO indicators on a **monthly basis**
+- Supports long-term monitoring and performance comparison
+
+### 🔹 DM & DO Targets (Metas de DM e DO)
+- Defines availability targets using **reduction factors**
+- Focuses on reducing total downtime hours
+- Compares actual downtime against target values
+
+### 🔹 Justifications
+- Database of justifications linked to downtime reason codes
+- Ensures standardization and clarity in downtime classification
+
+> ⚠️ The downtime reasons and justifications database is **fully scalable**, allowing the inclusion of as many reason codes as required, based on operational complexity and client needs.
+
+---
+
 ## 🛠️ Tools & Skills Applied
 - Excel (advanced formulas)
 - Indicator and KPI logic
@@ -114,8 +185,9 @@ Each sheet:
 This repository represents the **first stage** of a larger operational metrics structure.
 
 Future iterations may include:
-- Availability and maintenance indicators
 - Integrated dashboards
+- Cost and performance analysis
+- Cross-module indicators
 - Additional operational modules
 
 ---
@@ -142,3 +214,18 @@ Future iterations may include:
 
 ### Lubricants Target
 ![Lubricants Target](images/lubricants%20target.png)
+
+### Availability (DM & DO)
+![Availability](images/availability.png)
+
+### Availability Targets
+![Availability Targets](images/availability%20targets.png)
+
+### Downtime Details
+![Downtime Details](images/downtime%20details.png)
+
+## 👤 Author
+
+Developed by **Gabriel Henrique**  
+Computer Science student | Data, Game Development & Systems Enthusiast  
+Focused on connecting **technology, data, and real-world operations**
