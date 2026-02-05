@@ -22,7 +22,7 @@ To centralize operational data and provide:
 
 ## 🧩 Spreadsheet Structure
 
-The project is organized into **operational modules**, each focused on a specific set of indicators.
+The project is organized into **operational modules**, each focused on a specific set of indicators, all connected through a centralized data structure.
 
 ---
 
@@ -37,10 +37,14 @@ The project is organized into **operational modules**, each focused on a specifi
   - Lubricants usage tracking
   - Helps identify inefficiencies and abnormal consumption patterns
 
-- **Indicators & Metrics**
+- **Availability Control Spreadsheet**
   - Mechanical Availability (DM)
   - Operational Availability (DO)
-  - Relationship between maintenance, availability, and production
+  - Downtime analysis and availability targets
+
+- **Data Center Spreadsheet**
+  - Centralizes all operational data
+  - Consolidates indicators by machine, operation type, and client contract
 
 ---
 
@@ -172,17 +176,45 @@ As with other modules, all calculations are based on **real data entries**, and 
 
 ---
 
+## 🧠 Data Center Module (Central Data Spreadsheet)
+
+The **Data Center module** is the core integration layer of the entire structure, responsible for consolidating all operational data into a single analytical view.
+
+This spreadsheet is built using **Power Query**, connecting to all previously described spreadsheets and extracting data from hidden sheets.
+
+### 🔹 Data
+- Centralized operational dataset containing:
+  - Monthly production targets
+  - Production rhythm
+  - Overall consumption indicators
+  - Mechanical Availability (DM)
+  - Operational Availability (DO)
+- Data is structured by:
+  - Machine
+  - Operation type
+  - Client contract
+
+### 🔹 Monthly Targets
+- Calculates **next month production targets**
+- Based on historical production performance per machine
+- Feeds the *Monthly Target* column in the main Data sheet
+
+> ⚠️ This spreadsheet acts as a **single source of truth**, consolidating indicators from all operational modules into one unified and scalable structure.
+
+---
+
 ## 🛠️ Tools & Skills Applied
 - Excel (advanced formulas)
+- Power Query
 - Indicator and KPI logic
-- Data organization
+- Data modeling and consolidation
 - Operational process understanding
 - Analytical and structured thinking
 
 ---
 
 ## 📈 Project Status
-This repository represents the **first stage** of a larger operational metrics structure.
+This repository represents a **complete first version** of an operational metrics structure.
 
 Future iterations may include:
 - Integrated dashboards
@@ -223,6 +255,14 @@ Future iterations may include:
 
 ### Downtime Details
 ![Downtime Details](images/downtime%20details.png)
+
+### Central Data
+![Data](images/data.png)
+
+### Monthly Targets
+![Monthly Targets](images/mensal%20targets.png)
+
+---
 
 ## 👤 Author
 
